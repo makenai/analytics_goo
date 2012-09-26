@@ -1,7 +1,7 @@
 require 'uri'
 require 'cgi'
 require 'net/http'
-require 'active_support'
+require 'securerandom'
 require 'analytics_goo/google_analytics_adapter'
 
 module AnalyticsGoo

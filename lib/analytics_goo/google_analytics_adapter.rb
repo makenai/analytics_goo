@@ -131,7 +131,7 @@ module AnalyticsGoo
     # utmn
     #   Unique ID generated for each GIF request to prevent caching of the GIF image.   utmn=1142651215
     def utmn
-      ActiveSupport::SecureRandom.random_number(9999999999).to_s
+      SecureRandom.random_number(9999999999).to_s
     end
 
     # utmsc
@@ -260,11 +260,11 @@ module AnalyticsGoo
     end
 
     def utmcc_cookie
-      ActiveSupport::SecureRandom.random_number(89999999) + 10000000
+      SecureRandom.random_number(89999999) + 10000000
     end
 
     def utmcc_random
-      ActiveSupport::SecureRandom.random_number(1147483647) + 1000000000
+      SecureRandom.random_number(1147483647) + 1000000000
     end
 
     def utmcc_time
@@ -272,7 +272,7 @@ module AnalyticsGoo
     end
 
     def utmvid
-      "0x" + ActiveSupport::SecureRandom.hex[0,16]
+      "0x" + SecureRandom.hex[0,16]
     end
   end
 end
